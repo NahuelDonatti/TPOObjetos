@@ -4,13 +4,18 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Marca {
-    String nombre;
+    private String nombre;
 
     public Marca(String nombre){
         this.nombre = nombre;
     }
 
     public String getNombre() {
+        return nombre;
+    }
+
+    @Override
+    public String toString(){
         return nombre;
     }
 
@@ -29,6 +34,16 @@ public class Marca {
         } while (!nombre.equals("-1"));
         return marcas;
     }
+
+    public static Marca modificarMarca(Scanner sc, ArrayList<Marca> marcas){
+        Marca m = null;
+        m = Marca.elegirMarca(marcas);
+        System.out.println("Ingrese el nuevo nombre");
+        m.nombre = sc.nextLine();
+        return m;
+    }
+
+
 
     public static void mostrarMarcas(ArrayList<Marca> marcas){
         int index = 0;

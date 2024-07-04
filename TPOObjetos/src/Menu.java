@@ -38,4 +38,18 @@ public class Menu {
         }
         System.out.println("Saliendo...");
     }
+
+    public static int pedirUnNumero(int minRango, int maxRango, String mensaje){
+        Scanner sc = new Scanner(System.in);
+        String input = null;
+        System.out.println(mensaje);
+        do {
+            input = sc.nextLine();
+            if (Integer.parseInt(input) >= minRango && Integer.parseInt(input) <= maxRango){
+                return Integer.parseInt(input);
+            }
+
+        }while (!input.equals("-1"));
+        return Integer.parseInt(null);
+    }
 }
