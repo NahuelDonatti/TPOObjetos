@@ -47,7 +47,7 @@ public class Main {
             @Override
             public void ejecutar() {
                 Auto.mostrarAutos(ganancias.getVendidos());
-                System.out.println("Ganancias totales: U$D"+ganancias.getGanancias());
+                System.out.println("Ganancias totales: U$D "+ganancias.getGanancias());
             }
         });
         menuAuto.agregarOpcion(new OpcionMenu("Agregar un auto") {
@@ -76,7 +76,6 @@ public class Main {
         menuMarcas.agregarOpcion(new OpcionMenu("Agregar una marca") {
             @Override
             public void ejecutar() {
-                Marca.mostrarMarcas(marcas);
                 Marca.agregarMarcas(sc, marcas);
             }
         });

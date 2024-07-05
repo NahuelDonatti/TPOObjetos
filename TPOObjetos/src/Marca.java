@@ -25,7 +25,7 @@ public class Marca {
         Marca m;
         System.out.println("Escriba -1 para salir");
         do{
-            System.out.print("Ingrese la marca: ");
+            System.out.print("Ingrese la nueva marca: ");
             nombre = sc.nextLine();
             if (!nombre.equals("-1")){
                 m = new Marca(nombre);
